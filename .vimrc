@@ -27,9 +27,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'Vimjas/vim-python-pep8-indent'
 " Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'itchyny/lightline.vim'
 
 
 " All of your Plugins must be added before the following line"
@@ -69,7 +71,11 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let python_highlight_all=1
 syntax on
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-let g:ycm_python_binary_path='python3'
+"let g:ycm_python_binary_path='python3'
+let g:ycm_python_interpreter_path = ''
+let g:ycm_python_sys_path = []
+let g:ycm_extra_conf_vim_data = ['g:ycm_python_interpreter_path', 'g:ycm_python_sys_path']
+let g:ycm_global_ycm_extra_conf = '~/global_extra_conf.py'
 
 "===========================================================================================
 " NERDTree settings
