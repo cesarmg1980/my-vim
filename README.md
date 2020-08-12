@@ -1,3 +1,5 @@
+### This Repo Contains a Vim Configuration File (also known as .vimrc)
+-----------------------------------------
 ### Download and Installation Intructions
 
 - Download ".vimrc"
