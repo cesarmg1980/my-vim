@@ -61,6 +61,7 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set encoding=utf-8
 set splitright
+set splitbelow
 set nu
 set foldmethod=indent
 set foldlevel=99
