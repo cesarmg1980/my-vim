@@ -32,6 +32,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 " Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'itchyny/lightline.vim'
+Plugin 'majutsushi/tagbar'
 
 
 " All of your Plugins must be added before the following line"
@@ -76,6 +77,7 @@ let g:ycm_python_interpreter_path = ''
 let g:ycm_python_sys_path = []
 let g:ycm_extra_conf_vim_data = ['g:ycm_python_interpreter_path', 'g:ycm_python_sys_path']
 let g:ycm_global_ycm_extra_conf = '~/global_extra_conf.py'
+let g:tagbar_ctags_bin = '/usr/bin/ctags'
 
 "===========================================================================================
 " NERDTree settings
@@ -94,6 +96,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <space> za
+nmap <F8> :TagbarToggle<CR>
 
 "===========================================================================================
 " Scripts
