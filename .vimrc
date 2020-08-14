@@ -88,6 +88,7 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
+let g:syntastic_python_checkers = ['pylint']
 
 "===========================================================================================
 " NERDTree settings
