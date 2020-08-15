@@ -37,11 +37,21 @@ Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line"
 call vundle#end()		" required
-filetype plugin indent on	" required
 
 "==========================================================================================
 " Settings
 "
+filetype plugin indent on	" required
+syntax on
+
+au BufNewFile,BufRead *.c,*.cpp,*.h
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+
 au BufNewFile,BufRead *.py
 	\ set tabstop=4 |
 	\ set softtabstop=4 |
@@ -71,7 +81,6 @@ set foldlevel=99
 "
 let g:ycm_autoclose_preview_window_after_completion=1
 let python_highlight_all=1
-syntax on
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 "let g:ycm_python_binary_path='python3'
 let g:ycm_python_interpreter_path = ''
