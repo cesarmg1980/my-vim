@@ -1,8 +1,19 @@
-### This Repo Contains a Vim Configuration File (also known as .vimrc)
+### This Repo Contains a Vim Configuration File (.vimrc)
 -----------------------------------------
-### Download and Installation Intructions
+### Important: it is assumed that you already have installed vim's latest version
+----------------------------------------
+### Follow these Steps
 
 - Download ".vimrc"
+
+#### YouCompleteMe Plugin (you need to install some extra pkg before using `YouCompleteMe`)
+
 - Follow the 'YouCompleteMe' installation instructions found here: https://github.com/ycm-core/YouCompleteMe
-- Open '.vimrc' and execute `:PluginInstall`
+
+#### Tagbar Plugin (you need to have installed exuberant-ctags or any other similar before using Tagbar)
+
 - execute `sudo apt install exuberant-ctags`
+
+### Finally
+
+- Open '.vimrc' and execute `:PluginInstall`
