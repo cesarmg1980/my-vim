@@ -33,6 +33,7 @@ Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'itchyny/lightline.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'jiangmiao/auto-pairs'
 
 
 " All of your Plugins must be added before the following line"
