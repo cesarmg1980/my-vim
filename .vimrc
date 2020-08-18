@@ -45,6 +45,8 @@ call vundle#end()		" required
 filetype plugin indent on	" required
 syntax on
 
+"au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
+
 au BufNewFile,BufRead *.c,*.cpp,*.h
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -66,6 +68,11 @@ au BufNewFile,BufRead *.js,*.html,*.css
 	\ set tabstop=2 |
 	\ set softtabstop=2 |
 	\ set shiftwidth=2 |
+
+au BufNewFile,BufRead *.xml
+	\ set tabstop=4 |
+	\ set softtabstop=4 |
+	\ set shiftwidth=4 |
 
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
