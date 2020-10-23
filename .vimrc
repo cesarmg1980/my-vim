@@ -76,6 +76,8 @@ au BufNewFile,BufRead *.xml
 
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" Automatically remove trailing whitespaces on lines
+autocmd BufWritePre *.py %s/\s\+$//e
 
 set encoding=utf-8
 set splitright
