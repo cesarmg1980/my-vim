@@ -6,6 +6,10 @@
 
 - Download ".vimrc"
 
+### Install Vundle
+
+- Installation instructions here: https://github.com/VundleVim/Vundle.vim#about
+
 #### YouCompleteMe Plugin (you need to install some extra pkg before using `YouCompleteMe`)
 
 - Follow the 'YouCompleteMe' installation instructions found here: https://github.com/ycm-core/YouCompleteMe
