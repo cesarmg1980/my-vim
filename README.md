@@ -6,7 +6,7 @@
 
 - Download ".vimrc"
 
-### Install Vundle
+#### Install Vundle
 
 - Installation instructions here: https://github.com/VundleVim/Vundle.vim#about
 
