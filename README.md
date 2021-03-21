@@ -2,7 +2,7 @@
 -----------------------------------------
 ### Important: it is assumed that you already have installed vim's latest version.
 
-#### Note: You can download Vim's Sources here https://github.com/vim/vim, and follow these instructions: https://www.vim.org/git.php
+#### Note: You can download Vim's Sources here https://github.com/vim/vim, and follow these instructions: https://github.com/ycm-core/YouCompleteMe/wiki/Building-Vim-from-source
 
 ----------------------------------------
 ### Once installed follow these Steps
