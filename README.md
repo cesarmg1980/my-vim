@@ -27,7 +27,11 @@ Note: This plugin has been deactivated in `.vimrc` but you can use `coc` instead
 
 - execute `sudo apt install exuberant-ctags`
 
-### 5. Finally
+### 5. Install the necessary fonts for powerline plugin
+
+- Follow the steps here: https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation
+
+### 6. Finally
 
 - Open '.vimrc' and execute `:PluginInstall`
 
