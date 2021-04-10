@@ -48,7 +48,7 @@ syntax on
 
 "au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 
-au BufNewFile,BufRead *.c,*.cpp,*.h, *.hs
+au BufNewFile,BufRead *.c,*.cpp,*.h
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -80,6 +80,7 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " Automatically remove trailing whitespaces on lines
 autocmd BufWritePre *.py %s/\s\+$//e
 
+set backspace=indent,eol,start
 set encoding=utf-8
 set splitright
 set splitbelow
@@ -287,6 +288,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <space> za
+nnoremap <enter> za
 nmap <F8> :TagbarToggle<CR>
 "============================================================================================
