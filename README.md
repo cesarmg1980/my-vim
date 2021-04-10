@@ -12,30 +12,24 @@
 #### 1. Install Vundle
 
 - Installation instructions here: https://github.com/VundleVim/Vundle.vim#about
-
-#### 2. Install `vim.coc` Plugin
-
-- Install `vim.coc` follow these instructions https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
-
-#### (Optional in case you don't want #2) 3. YouCompleteMe Plugin (you need to install some extra pkg before using `YouCompleteMe`)
-
-Note: This plugin has been deactivated in `.vimrc` but you can use `coc` instead, but in case you want to use, activate in `.vimrc` and check the next step
-
-- Follow the 'YouCompleteMe' installation instructions found here: https://github.com/ycm-core/YouCompleteMe
-
-#### 4. Install Tagbar Plugin (you need to have installed exuberant-ctags or any other similar before using Tagbar)
-
-- execute `sudo apt install exuberant-ctags`
-
-#### 5. Install the necessary fonts for powerline plugin
+    
+#### 2. Install the required fonts for powerline plugin
 
 - Follow the steps here: https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation
 
-#### 6. Install Plugins
+#### 3. Install requirements for  Tagbar Plugin. 
+
+- execute `sudo apt install exuberant-ctags`
+
+#### 4. Install `node.js`, required for `coc-nvim`
+
+- Follow these instructions https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
+
+#### 5. Install Vim's Plugins
 
 - Open '.vimrc' and execute `:PluginInstall`
 
-#### 7. Install any `coc` language extension required (i.e. Python, C++, etc.)
+#### 6. Install any `coc` language extension required (i.e. Python, C++, etc.)
 
 - Follow the next link to install `coc` extensions https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#install-extensions
 
