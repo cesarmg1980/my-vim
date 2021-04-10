@@ -27,11 +27,19 @@ Note: This plugin has been deactivated in `.vimrc` but you can use `coc` instead
 
 - execute `sudo apt install exuberant-ctags`
 
-### 5. Install the necessary fonts for powerline plugin
+#### 5. Install the necessary fonts for powerline plugin
 
 - Follow the steps here: https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation
 
-### 6. Finally
+#### 6. Install Plugins
 
 - Open '.vimrc' and execute `:PluginInstall`
 
+#### 7. Install any `coc` language extension required (i.e. Python, C++, etc.)
+
+- Follow the next link to install `coc` extensions https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#install-extensions
+
+After installation of a particular extension, if you need it to behave different than default you can customize it.
+
+- Open Vim and execute `:CocConfig` this will create the necessary `~/.config/nvim/coc-settings.json`
+- Add any custom configuration to this file check this link for reference: https://github.com/pappasam/coc-jedi#configuration
