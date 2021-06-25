@@ -48,7 +48,7 @@ syntax on
 
 "au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 
-au BufNewFile,BufRead *.c,*.cpp,*.h
+au BufNewFile,BufRead *.c,*.cpp,*.h,*.java
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
