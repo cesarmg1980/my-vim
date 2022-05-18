@@ -12,24 +12,32 @@
 #### 1. Install Vundle
 
 - Installation instructions here: https://github.com/VundleVim/Vundle.vim#about
-    
-#### 2. Install the required fonts for powerline plugin
 
-- Follow the steps here: https://powerline.readthedocs.io/en/latest/installation/linux.html#fonts-installation
+#### 2. Install requirements for  Tagbar Plugin. 
 
-#### 3. Install requirements for  Tagbar Plugin. 
+#### 2.1 Linux
 
 - execute `sudo apt install exuberant-ctags`
 
-#### 4. Install `node.js`, required for `coc-nvim`
+#### 2.2 MacOs
+
+- execute `brew install ctags`
+
+**Note:** if you find that when pressing "F8" throws an error about the path you should change the following in `~/.vimrc`:
+
+```
+let g:tagbar_ctags_bin = '/path/to/ctags_or_exuberant-ctags'
+```
+
+#### 3. Install `node.js`, required for `coc-nvim`
 
 - Follow these instructions https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
 
-#### 5. Install Vim's Plugins
+#### 4. Install Vim's Plugins
 
 - Open '.vimrc' and execute `:PluginInstall`
 
-#### 6. Install any `coc` language extension required (i.e. Python, C++, etc.)
+#### 5. Install any `coc` language extension required (i.e. Python, C++, etc.)
 
 - Follow the next link to install `coc` extensions https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#install-extensions
 
