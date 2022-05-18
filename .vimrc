@@ -3,6 +3,7 @@
 "
 set nocompatible		"required
 filetype off			"required
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -18,24 +19,16 @@ Plugin 'gmarik/Vundle.vim'
 "My Plugins
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'Vimjas/vim-python-pep8-indent'
-" Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'sheerun/vim-polyglot'
-"Plugin 'itchyny/lightline.vim'
+Plugin 'itchyny/lightline.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plugin 'psf/black'
 
 " All of your Plugins must be added before the following line"
 call vundle#end()		" required
@@ -88,6 +81,7 @@ set nu
 set foldmethod=indent
 set foldlevel=99
 set nowrap
+set hlsearch
 
 if has('gui_running')
 	set background=dark
@@ -97,6 +91,9 @@ else
 endif
 call togglebg#map("<F5>")
 
+" =======================================================================
+" coc-nvim settings 
+"
 " Give more space for displaying messages.
 set cmdheight=2
 
@@ -250,44 +247,47 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 "===========================================================================================
-"===========================================================================================
 "
-"let g:ycm_autoclose_preview_window_after_completion=1
 let python_highlight_all=1
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-"let g:ycm_python_binary_path='python3'
-"let g:ycm_python_interpreter_path = ''
-"let g:ycm_python_sys_path = []
-"let g:ycm_extra_conf_vim_data = ['g:ycm_python_interpreter_path', 'g:ycm_python_sys_path']
-"let g:ycm_global_ycm_extra_conf = '~/global_extra_conf.py'
-let g:tagbar_ctags_bin = '/usr/bin/ctags'
-"let g:lightline = {
-"      \ 'active': {
-"      \   'left': [ [ 'mode', 'paste' ],
-"      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-"      \ },
-"      \ 'component_function': {
-"      \   'gitbranch': 'FugitiveHead'
-"      \ },
-"      \ }
-let g:syntastic_python_checkers = ['pylint']
-
-"===========================================================================================
-" NERDTree settings
-"
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 "===========================================================================================
 " Key Mappings
 "
-"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-map <C-n> :NERDTreeToggle<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <enter> za
 nmap <F8> :TagbarToggle<CR>
+
 "============================================================================================
+" Black format on save
+"
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
+
+"============================================================================================
+" NETRW Settings (the NerdTree replacement)
+"
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
