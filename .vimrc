@@ -29,6 +29,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'psf/black'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line"
 call vundle#end()		" required
@@ -41,7 +42,7 @@ syntax on
 
 "au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 
-au BufNewFile,BufRead *.c,*.cpp,*.h,*.java
+au BufNewFile,BufRead *.c,*.cpp,*.h,*.java,*.rs
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -82,6 +83,7 @@ set foldmethod=indent
 set foldlevel=99
 set nowrap
 set hlsearch
+set incsearch
 
 if has('gui_running')
 	set background=dark
