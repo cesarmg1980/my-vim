@@ -30,6 +30,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'psf/black'
 Plugin 'mileszs/ack.vim'
+Plugin 'rafi/awesome-vim-colorschemes'
 
 " All of your Plugins must be added before the following line"
 call vundle#end()		" required
@@ -89,7 +90,7 @@ if has('gui_running')
 	set background=dark
 	colorscheme solarized
 else
-	colorscheme zenburn
+	colorscheme OceanicNext
 endif
 call togglebg#map("<F5>")
 
@@ -120,6 +121,9 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -256,7 +260,10 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'modified' ] ],
+      \   'right': [['lineinfo'], 
+			\							['relativepath'],
+			\							['fileformat', 'fileencoding', 'filetype'] ],
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
