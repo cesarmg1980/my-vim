@@ -31,6 +31,7 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'psf/black'
 Plugin 'mileszs/ack.vim'
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
 
 " All of your Plugins must be added before the following line"
 call vundle#end()		" required
@@ -83,7 +84,6 @@ set nu
 set foldmethod=indent
 set foldlevel=99
 set nowrap
-set hlsearch
 set incsearch
 
 if has('gui_running')
@@ -291,12 +291,12 @@ augroup end
 "============================================================================================
 " NETRW Settings (the NerdTree replacement)
 "
-let g:netrw_banner = 0
+" let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 20
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
+" let g:netrw_browse_split = 4
+" let g:netrw_altv = 1
+" let g:netrw_winsize = 20
+" augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore
+" augroup END
